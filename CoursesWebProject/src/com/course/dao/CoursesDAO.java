@@ -10,7 +10,7 @@ import com.course.model.Course;
 
 
 public enum CoursesDAO {   
-	INSTANCE;    
+	INSTANCE;     
 	
 	public List<Course> listCourses() {     
 		EntityManager em = EMFService.get().createEntityManager();      
