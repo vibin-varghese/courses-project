@@ -1,0 +1,37 @@
+<script src="./scripts/insertupdatecourse.js" type="text/javascript"></script>
+<p />
+<div id="insert" align="center">
+  	<table class="insertupdate">
+  		<tr><td id="insertHeading" colspan="2" class="legend">Insert New Course (JSON)</td></tr>
+  		<tr><td id="updateHeading" colspan="2" class="legend">Update Course (JSON)</td></tr>
+  		<tr><td>&nbsp;</td></tr>
+  		<tr><td align="right">Course Name: </td>
+  			<td><input type="text" id="name" name="courseName" /></td></tr>
+  		<tr><td align="right">Course Duration: </td>
+  			<td><select id="courseDuration" name="duration">
+  					<option value="0">Select</option>
+		       		<option value="1">1 Year</option>
+				    <option value="2">2 Year</option>
+				    <option value="3">3 Year</option>
+				    <option value="4">4 Year</option>
+		       </select>
+		     </td></tr>
+  		<tr><td align="right">Course Credits: </td>
+  			<td><input type="text" id="courseCredits" readonly="readonly" name="courseCredits" />
+		     </td></tr>
+		<tr><td align="right">Course Leader: </td>
+			<td><input type="text" id="courseLeader" name="courseLeader" />
+		     </td></tr>
+		<tr><td>&nbsp;</td></tr>     
+  		<tr><td  align="right">
+  		<input type="submit" id="save-course" name="course-submit" 
+  					value="Save" />
+  			</td>
+  			<td  align="left">
+  		<input type="button" id="reset-course" name="reset" 
+  					value="Reset" />
+  			</td></tr>
+  	</table>   
+  	<p></p>
+	<div id="course-save-results"></div>
+</div>

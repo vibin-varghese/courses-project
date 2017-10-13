@@ -1,0 +1,45 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("#hideResultsName").hide();
+	$("#deleteInfo").hide();
+	$("#name").focus(function() {
+		$("#deleteInfo").hide();
+	});
+	$("#courseSubmit").click(callCourseServlet);
+	$("#hideResultsName").click(function() {
+		$("#course-name-results").hide();
+		$("#hideResultsName").hide();
+		$("#deleteInfo").hide();
+		//hide paging functionality first time
+		$("#showpaging").hide();
+	});
+	
+	//paging
+	findMaxRows();
+	$("#paging").val(0);
+	$("#showpaging").hide();
+	$("#next").click(next);
+	$("#previous").click(previous);
+})
+</script>
+<div id="json" align="center">
+  	<table class="tech-table">
+  		<tr><th class="legend">Search by Course Name (JSON)</th></tr>
+  		<tr><td class="rowseperate">Course Name: <input type="text" id="name" name="courseName" /></td></tr>
+  		<tr><td align="center">
+  		<input type="submit" id="courseSubmit" name="course-submit" 
+  					value="Submit" />
+  		<input type="button" id="hideResultsName" value="Clear Display"/>			
+  		</td></tr>
+  	</table>   
+	<div id="showpaging">
+		<table>
+		<tr><td class="rowseperate" align="center">
+		<input type="button" style="width:80px" id="previous" value="Previous" />
+		<input type="button" style="width:80px" id="next" value="Next"/>			
+		</td></tr>
+		</table>
+	</div>
+	<div id="course-name-results"></div>
+</div>
