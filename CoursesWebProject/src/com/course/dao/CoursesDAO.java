@@ -28,6 +28,10 @@ public enum CoursesDAO {
 			}   
 		}  
 	
+	/*
+	 * This method updates the course 
+	 * 
+	 */
 	public void updateCourse(Course course) {
 		
 		synchronized (this) {      
